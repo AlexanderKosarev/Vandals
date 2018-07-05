@@ -1,15 +1,19 @@
-﻿@{
-  Layout = null;
-  ViewBag.Title = "Wall";
+@using vandals.Models
+@{
+    Layout = null;
+    ViewBag.Title = "Wall";
 }
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>@ViewBag.Title</title>
-  </head>
-  <body>
-    <div>
-      @ViewBag.Messege
-    </div>
-  </body>
+</head>
+<body>
+<div>
+    @for (int i = 0; i < ViewBag.Array.Count; i++)
+    {
+        <p>@ViewBag.Array[i].Text</p>
+    }
+</div>
+</body>
 </html>
